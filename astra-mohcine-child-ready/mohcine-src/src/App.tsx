@@ -15,12 +15,27 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// Get basename from window.Mohcine_DATA if available (WordPress), otherwise use default
+const getBasename = () => {
+  if (typeof window !== 'undefined' && (window as any).Mohcine_DATA?.basename) {
+    return (window as any).Mohcine_DATA.basename;
+  }
+  // Default: no basename for production WordPress at root
+  return '/';
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/wordpress">
+      <BrowserRouter 
+        basename={getBasename()}
+        future={{
+          v7_startTransition: true,
+          v7_relativeSplatPath: true,
+        }}
+      >
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />

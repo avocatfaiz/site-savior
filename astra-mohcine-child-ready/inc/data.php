@@ -496,6 +496,8 @@ function astra_mohcine_inject_data() {
 		'wp_footer',
 		function() {
 			$data = astra_mohcine_build_data();
+			// Add basename for React Router - empty string means root
+			$data['basename'] = '/';
 			printf(
 				'<script id="Mohcine-data">window.Mohcine_DATA = %s;</script>',
 				wp_json_encode( $data )

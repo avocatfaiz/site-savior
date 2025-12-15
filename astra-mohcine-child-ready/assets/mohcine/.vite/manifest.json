@@ -1,0 +1,203 @@
+{
+  "index.html": {
+    "file": "assets/index-Dqf8OG48.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "css": [
+      "assets/index-Dklzl2eA.css"
+    ],
+    "assets": [
+      "assets/quran-hero-CDHOZpSd.jpg",
+      "assets/mosque-interior-CeHLZMXt.jpg",
+      "assets/hero-pattern-CbDbIkjZ.jpg",
+      "assets/reading-hero-CCCsARq-.jpg",
+      "assets/news-1-Cqdpuz3S.jpg",
+      "assets/news-2-BEgdIX6F.jpg",
+      "assets/news-3-YltVlld_.jpg",
+      "assets/chairman-BxGA5tEY.png",
+      "assets/partner-1-D8xeHMLD.webp",
+      "assets/partner-2-BZn6vxz1.webp",
+      "assets/partner-3-B8MxS_sH.webp",
+      "assets/partner-4-CCWLRlYy.webp",
+      "assets/partner-5-DgI-edJX.webp",
+      "assets/partner-6-DYfqGNko.webp",
+      "assets/partner-7-CDTjTiri.webp",
+      "assets/partner-8-KGW8eruJ.webp",
+      "assets/partner-9-J1K4VQ17.webp",
+      "assets/partner-10-BqtwfeTE.webp",
+      "assets/partner-11-60StPW_e.webp",
+      "assets/partner-12-CenOENaM.webp",
+      "assets/partner-13-DdW_-WTC.webp",
+      "assets/partner-14-CjlisCVn.webp",
+      "assets/partner-15-J-S4sisK.webp",
+      "assets/partner-16-BoU3utM4.webp",
+      "assets/partner-17-C4dxdUic.webp",
+      "assets/partner-18-AWaUuSXQ.webp",
+      "assets/partner-19-wqX8Tn_r.webp",
+      "assets/partner-20-BZbR5nq2.webp",
+      "assets/partner-21-utMTuRDs.webp",
+      "assets/partner-22-CtNXhB9i.webp",
+      "assets/partner-23-Cn75jsum.webp",
+      "assets/partner-24-wp1CzNhZ.webp",
+      "assets/partner-25-DbMYlw6L.webp",
+      "assets/partner-26-DpLDV2hH.webp",
+      "assets/partner-27-CTW-P4iH.webp",
+      "assets/partner-28-KHHAQSP9.webp",
+      "assets/partner-29-Dbtle5Ty.webp",
+      "assets/partner-30-BCiDaM6_.webp"
+    ]
+  },
+  "src/assets/chairman.png": {
+    "file": "assets/chairman-BxGA5tEY.png",
+    "src": "src/assets/chairman.png"
+  },
+  "src/assets/hero-pattern.jpg": {
+    "file": "assets/hero-pattern-CbDbIkjZ.jpg",
+    "src": "src/assets/hero-pattern.jpg"
+  },
+  "src/assets/mosque-interior.jpg": {
+    "file": "assets/mosque-interior-CeHLZMXt.jpg",
+    "src": "src/assets/mosque-interior.jpg"
+  },
+  "src/assets/news-1.jpg": {
+    "file": "assets/news-1-Cqdpuz3S.jpg",
+    "src": "src/assets/news-1.jpg"
+  },
+  "src/assets/news-2.jpg": {
+    "file": "assets/news-2-BEgdIX6F.jpg",
+    "src": "src/assets/news-2.jpg"
+  },
+  "src/assets/news-3.jpg": {
+    "file": "assets/news-3-YltVlld_.jpg",
+    "src": "src/assets/news-3.jpg"
+  },
+  "src/assets/partners/partner-1.webp": {
+    "file": "assets/partner-1-D8xeHMLD.webp",
+    "src": "src/assets/partners/partner-1.webp"
+  },
+  "src/assets/partners/partner-10.webp": {
+    "file": "assets/partner-10-BqtwfeTE.webp",
+    "src": "src/assets/partners/partner-10.webp"
+  },
+  "src/assets/partners/partner-11.webp": {
+    "file": "assets/partner-11-60StPW_e.webp",
+    "src": "src/assets/partners/partner-11.webp"
+  },
+  "src/assets/partners/partner-12.webp": {
+    "file": "assets/partner-12-CenOENaM.webp",
+    "src": "src/assets/partners/partner-12.webp"
+  },
+  "src/assets/partners/partner-13.webp": {
+    "file": "assets/partner-13-DdW_-WTC.webp",
+    "src": "src/assets/partners/partner-13.webp"
+  },
+  "src/assets/partners/partner-14.webp": {
+    "file": "assets/partner-14-CjlisCVn.webp",
+    "src": "src/assets/partners/partner-14.webp"
+  },
+  "src/assets/partners/partner-15.webp": {
+    "file": "assets/partner-15-J-S4sisK.webp",
+    "src": "src/assets/partners/partner-15.webp"
+  },
+  "src/assets/partners/partner-16.webp": {
+    "file": "assets/partner-16-BoU3utM4.webp",
+    "src": "src/assets/partners/partner-16.webp"
+  },
+  "src/assets/partners/partner-17.webp": {
+    "file": "assets/partner-17-C4dxdUic.webp",
+    "src": "src/assets/partners/partner-17.webp"
+  },
+  "src/assets/partners/partner-18.webp": {
+    "file": "assets/partner-18-AWaUuSXQ.webp",
+    "src": "src/assets/partners/partner-18.webp"
+  },
+  "src/assets/partners/partner-19.webp": {
+    "file": "assets/partner-19-wqX8Tn_r.webp",
+    "src": "src/assets/partners/partner-19.webp"
+  },
+  "src/assets/partners/partner-2.webp": {
+    "file": "assets/partner-2-BZn6vxz1.webp",
+    "src": "src/assets/partners/partner-2.webp"
+  },
+  "src/assets/partners/partner-20.webp": {
+    "file": "assets/partner-20-BZbR5nq2.webp",
+    "src": "src/assets/partners/partner-20.webp"
+  },
+  "src/assets/partners/partner-21.webp": {
+    "file": "assets/partner-21-utMTuRDs.webp",
+    "src": "src/assets/partners/partner-21.webp"
+  },
+  "src/assets/partners/partner-22.webp": {
+    "file": "assets/partner-22-CtNXhB9i.webp",
+    "src": "src/assets/partners/partner-22.webp"
+  },
+  "src/assets/partners/partner-23.webp": {
+    "file": "assets/partner-23-Cn75jsum.webp",
+    "src": "src/assets/partners/partner-23.webp"
+  },
+  "src/assets/partners/partner-24.webp": {
+    "file": "assets/partner-24-wp1CzNhZ.webp",
+    "src": "src/assets/partners/partner-24.webp"
+  },
+  "src/assets/partners/partner-25.webp": {
+    "file": "assets/partner-25-DbMYlw6L.webp",
+    "src": "src/assets/partners/partner-25.webp"
+  },
+  "src/assets/partners/partner-26.webp": {
+    "file": "assets/partner-26-DpLDV2hH.webp",
+    "src": "src/assets/partners/partner-26.webp"
+  },
+  "src/assets/partners/partner-27.webp": {
+    "file": "assets/partner-27-CTW-P4iH.webp",
+    "src": "src/assets/partners/partner-27.webp"
+  },
+  "src/assets/partners/partner-28.webp": {
+    "file": "assets/partner-28-KHHAQSP9.webp",
+    "src": "src/assets/partners/partner-28.webp"
+  },
+  "src/assets/partners/partner-29.webp": {
+    "file": "assets/partner-29-Dbtle5Ty.webp",
+    "src": "src/assets/partners/partner-29.webp"
+  },
+  "src/assets/partners/partner-3.webp": {
+    "file": "assets/partner-3-B8MxS_sH.webp",
+    "src": "src/assets/partners/partner-3.webp"
+  },
+  "src/assets/partners/partner-30.webp": {
+    "file": "assets/partner-30-BCiDaM6_.webp",
+    "src": "src/assets/partners/partner-30.webp"
+  },
+  "src/assets/partners/partner-4.webp": {
+    "file": "assets/partner-4-CCWLRlYy.webp",
+    "src": "src/assets/partners/partner-4.webp"
+  },
+  "src/assets/partners/partner-5.webp": {
+    "file": "assets/partner-5-DgI-edJX.webp",
+    "src": "src/assets/partners/partner-5.webp"
+  },
+  "src/assets/partners/partner-6.webp": {
+    "file": "assets/partner-6-DYfqGNko.webp",
+    "src": "src/assets/partners/partner-6.webp"
+  },
+  "src/assets/partners/partner-7.webp": {
+    "file": "assets/partner-7-CDTjTiri.webp",
+    "src": "src/assets/partners/partner-7.webp"
+  },
+  "src/assets/partners/partner-8.webp": {
+    "file": "assets/partner-8-KGW8eruJ.webp",
+    "src": "src/assets/partners/partner-8.webp"
+  },
+  "src/assets/partners/partner-9.webp": {
+    "file": "assets/partner-9-J1K4VQ17.webp",
+    "src": "src/assets/partners/partner-9.webp"
+  },
+  "src/assets/quran-hero.jpg": {
+    "file": "assets/quran-hero-CDHOZpSd.jpg",
+    "src": "src/assets/quran-hero.jpg"
+  },
+  "src/assets/reading-hero.jpg": {
+    "file": "assets/reading-hero-CCCsARq-.jpg",
+    "src": "src/assets/reading-hero.jpg"
+  }
+}

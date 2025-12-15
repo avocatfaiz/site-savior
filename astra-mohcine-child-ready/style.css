@@ -1,0 +1,60 @@
+/*
+Theme Name: Astra Mohcine Child
+Theme URI: https://example.com/
+Description: Child theme for integrating Mohcine static site on Astra.
+Author: Site Team
+Template: astra
+Version: 0.1.0
+Text Domain: astra-mohcine-child
+*/
+
+/* Template-specific tweaks */
+body.mohcine-template .site-header,
+body.mohcine-template .site-footer,
+body.mohcine-template .entry-header {
+	display: none;
+}
+
+body.mohcine-template .site-content,
+body.mohcine-template .entry-content,
+body.mohcine-template .ast-container {
+	max-width: 100%;
+	padding: 0;
+	margin: 0 auto;
+}
+
+body.mohcine-template #content,
+body.mohcine-template #primary,
+body.mohcine-template main {
+	margin: 0;
+	padding: 0;
+}
+
+/* Remove any stray offsets and horizontal scroll on the Mohcine canvas */
+body.mohcine-template {
+	margin: 0;
+	overflow-x: hidden;
+}
+
+body.mohcine-template #page {
+	margin: 0;
+	padding: 0;
+}
+
+/* Hide Astra's native scroll-to-top button on the Mohcine template (we render our own) */
+body.mohcine-template #ast-scroll-top {
+	display: none !important;
+}
+
+body.mohcine-template #mohcine-root,
+body.mohcine-template #root {
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+/* Safety: if the Mohcine footer ever renders twice, hide any extra instances */
+body.mohcine-template .mohcine-footer:not(:first-of-type) {
+	display: none !important;
+}

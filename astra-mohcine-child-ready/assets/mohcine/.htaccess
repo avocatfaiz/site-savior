@@ -1,0 +1,22 @@
+# Enable correct MIME types for Vite assets
+<IfModule mod_mime.c>
+    AddType application/javascript .js
+    AddType text/css .css
+    AddType image/webp .webp
+    AddType image/jpeg .jpg
+    AddType image/png .png
+</IfModule>
+
+# Allow cross-origin for module scripts
+<IfModule mod_headers.c>
+    <FilesMatch "\.(js|css|webp|jpg|png)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule>
+
+# Ensure files are served correctly
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^(.*)$ $1 [L]
+</IfModule>

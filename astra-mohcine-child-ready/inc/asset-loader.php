@@ -60,7 +60,7 @@ function astra_mohcine_enqueue_vite_assets() {
  */
 function astra_mohcine_script_type( $tag, $handle, $src ) {
 	if ( 'astra-mohcine-app' === $handle ) {
-		return '<script type="module" src="' . esc_url( $src ) . '" crossorigin="anonymous"></script>';
+		return '<script type="module" src="' . esc_url( $src ) . '"></script>';
 	}
 	return $tag;
 }

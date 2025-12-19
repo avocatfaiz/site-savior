@@ -123,5 +123,36 @@ function astra_mohcine_register_rest_routes() {
 			'permission_callback' => '__return_true',
 		)
 	);
+
+	// Debug endpoint to check ACF hero_slides data.
+	register_rest_route(
+		'Mohcine/v1',
+		'/debug-hero',
+		array(
+			'methods'             => WP_REST_Server::READABLE,
+			'callback'            => 'astra_mohcine_debug_hero',
+			'permission_callback' => '__return_true',
+		)
+	);
 }
 add_action( 'rest_api_init', 'astra_mohcine_register_rest_routes' );
+
+/**
+ * Debug endpoint to check hero_slides ACF data.
+ */
+function astra_mohcine_debug_hero() {
+	$page_id = astra_mohcine_settings_page_id();
+	$debug   = array(
+		'page_id'         => $page_id,
+		'acf_exists'      => function_exists( 'get_field' ),
+		'hero_slides_raw' => null,
+		'all_fields'      => null,
+	);
+
+	if ( $page_id && function_exists( 'get_field' ) ) {
+		$debug['hero_slides_raw'] = get_field( 'hero_slides', $page_id );
+		$debug['all_fields']      = get_fields( $page_id );
+	}
+
+	return new WP_REST_Response( $debug );
+}

@@ -347,7 +347,17 @@ function astra_mohcine_build_data() {
 	$data['whatsapp']['label']   = astra_mohcine_get_field( 'whatsapp_label', $data['whatsapp']['label'] );
 
 	// Hero slides (titles + images). Prefer group to capture nested values.
-	$hero_group = ( $page_id && function_exists( 'get_field' ) ) ? get_field( 'hero_slides', $page_id ) : null;
+	// Debug: Check if ACF function exists and page_id is valid.
+	$hero_group = null;
+	if ( $page_id && function_exists( 'get_field' ) ) {
+		$hero_group = get_field( 'hero_slides', $page_id );
+	}
+
+	// Also try without page_id (uses current post) as fallback.
+	if ( empty( $hero_group ) && function_exists( 'get_field' ) ) {
+		$hero_group = get_field( 'hero_slides' );
+	}
+
 	for ( $i = 0; $i < 4; $i++ ) {
 		$key     = "hero_slide_" . ( $i + 1 ) . "_title";
 		$img_key = "hero_slide_" . ( $i + 1 ) . "_image";
@@ -355,7 +365,7 @@ function astra_mohcine_build_data() {
 		$slide_image = null;
 
 		// First check group fields (ACF groups store sub_fields directly).
-		if ( is_array( $hero_group ) ) {
+		if ( is_array( $hero_group ) && ! empty( $hero_group ) ) {
 			if ( isset( $hero_group[ $key ] ) && '' !== $hero_group[ $key ] ) {
 				$slide_title = $hero_group[ $key ];
 			}
@@ -366,20 +376,10 @@ function astra_mohcine_build_data() {
 					$slide_image = $img_val['url'];
 				} elseif ( is_string( $img_val ) && '' !== $img_val ) {
 					$slide_image = $img_val;
+				} elseif ( is_numeric( $img_val ) ) {
+					// If it's an attachment ID, get the URL.
+					$slide_image = wp_get_attachment_url( $img_val );
 				}
-			}
-		}
-
-		// Fallback to flat fields only if group didn't provide values.
-		if ( null === $slide_title ) {
-			$slide_title = astra_mohcine_get_field( $key, null );
-		}
-		if ( null === $slide_image ) {
-			$img_val = astra_mohcine_get_field( $img_key, null );
-			if ( is_array( $img_val ) && isset( $img_val['url'] ) ) {
-				$slide_image = $img_val['url'];
-			} elseif ( is_string( $img_val ) && '' !== $img_val ) {
-				$slide_image = $img_val;
 			}
 		}
 

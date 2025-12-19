@@ -351,19 +351,45 @@ function astra_mohcine_build_data() {
 	for ( $i = 0; $i < 4; $i++ ) {
 		$key     = "hero_slide_" . ( $i + 1 ) . "_title";
 		$img_key = "hero_slide_" . ( $i + 1 ) . "_image";
+		$slide_title = null;
+		$slide_image = null;
 
+		// First check group fields (ACF groups store sub_fields directly).
 		if ( is_array( $hero_group ) ) {
 			if ( isset( $hero_group[ $key ] ) && '' !== $hero_group[ $key ] ) {
-				$data['heroSlides'][ $i ]['title'] = $hero_group[ $key ];
+				$slide_title = $hero_group[ $key ];
 			}
-			if ( isset( $hero_group[ $img_key ] ) && '' !== $hero_group[ $img_key ] ) {
-				$data['heroSlides'][ $i ]['image'] = $hero_group[ $img_key ];
+			if ( isset( $hero_group[ $img_key ] ) ) {
+				// Handle both URL string and array formats from ACF image field.
+				$img_val = $hero_group[ $img_key ];
+				if ( is_array( $img_val ) && isset( $img_val['url'] ) ) {
+					$slide_image = $img_val['url'];
+				} elseif ( is_string( $img_val ) && '' !== $img_val ) {
+					$slide_image = $img_val;
+				}
 			}
 		}
 
-		// Fallback to flat fields.
-		$data['heroSlides'][ $i ]['title'] = astra_mohcine_get_field( $key, $data['heroSlides'][ $i ]['title'] );
-		$data['heroSlides'][ $i ]['image'] = astra_mohcine_get_field( $img_key, $data['heroSlides'][ $i ]['image'] ?? null );
+		// Fallback to flat fields only if group didn't provide values.
+		if ( null === $slide_title ) {
+			$slide_title = astra_mohcine_get_field( $key, null );
+		}
+		if ( null === $slide_image ) {
+			$img_val = astra_mohcine_get_field( $img_key, null );
+			if ( is_array( $img_val ) && isset( $img_val['url'] ) ) {
+				$slide_image = $img_val['url'];
+			} elseif ( is_string( $img_val ) && '' !== $img_val ) {
+				$slide_image = $img_val;
+			}
+		}
+
+		// Apply values only if we got something from ACF, otherwise keep defaults.
+		if ( null !== $slide_title && '' !== $slide_title ) {
+			$data['heroSlides'][ $i ]['title'] = $slide_title;
+		}
+		if ( null !== $slide_image && '' !== $slide_image ) {
+			$data['heroSlides'][ $i ]['image'] = $slide_image;
+		}
 	}
 
 	// Services.
